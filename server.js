@@ -9,11 +9,15 @@ app.use(express.json()); // Parse JSON bodies
 let tasks = [];
 let idCounter = 1;
 
+// ✅ ADD THIS ROOT ROUTE
+app.get("/", (req, res) => {
+  res.send("✅ Backend is running! You’re all set!");
+});
+
 // GET /tasks?email=...
 app.get("/tasks", (req, res) => {
   const email = req.query.email;
   if (!email) return res.status(400).json({ error: "Email is required" });
-  // Filter tasks by email
   const userTasks = tasks.filter((t) => t.email === email);
   res.json(userTasks);
 });
@@ -63,6 +67,5 @@ app.delete("/tasks/:id", (req, res) => {
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT} 🚀`);
 });
-
