@@ -36,4 +36,9 @@ cd katomaran-todo-hackathon
 3️⃣ Connect your repo.
 4️⃣ Use Start Command:
 node server.js
-5️⃣ Deploy! You’ll get a public backend URL like:https://katomaran-todo-hackathon-3.onrender.com/
+Deploy! You’ll get a public backend URL like:
+https://katomaran-todo-hackathon-3.onrender.com/
+⚡ Usage with Frontend
+REACT_APP_BACKEND_URL=https://katomaran-todo-hackathon-3.onrender.com
+This project is a part of a hackathon run by
+https://www.katomaran.com
